@@ -4,16 +4,25 @@ import java.util.Scanner;
 
 public class TestPIN {
     public static void main(String[] args) {
-//        Scanner
+        String PIN = "1234";
+        String input;
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Input your PIN : ");
-
-        int PIN=3;
+        int count = 0;
         do {
-            if (PIN)
+            System.out.print("Enter your PIN: ");
+            input = scanner.nextLine();
+            if(input.equals(PIN))
+            {
                 System.out.println("Welcome");
-        } while
-            ("Locked");
-
-    }
-}
+                break;
+            }
+            else {
+                count++;
+                if(count ==3) {
+                    System.out.println("Locked.");
+                    break;
+                }
+            }
+        } while (!input.equals(PIN));
+    }// main
+}//class
