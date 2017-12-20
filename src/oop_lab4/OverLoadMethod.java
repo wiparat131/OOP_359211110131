@@ -14,7 +14,6 @@ public class OverLoadMethod {
     }
     public static void B(){
         System.out.println("Hello B");
-
     }
     public static void main(String[] args) {
     A();
