@@ -24,7 +24,7 @@ public abstract class StudentData {
         }//main
 
         private static String getStdEmail() throws IOException {
-            System.out.print("Enter your id: ");
+            System.out.print("Enter your email: ");
             String email = reader.readLine();
             return email;
         }
