@@ -37,12 +37,6 @@ public class myString {
         System.out.println("*"+str6+"*");
         System.out.println("*"+str6.trim()+"*");
 
-
-
-
-
-
-
     }//main
 
 }//class
