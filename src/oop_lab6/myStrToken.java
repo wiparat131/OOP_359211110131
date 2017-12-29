@@ -14,7 +14,5 @@ public class myStrToken {
             System.out.print(buffer.reverse()+" ");
         }//while
 
-
-
     }//main
 }//class
