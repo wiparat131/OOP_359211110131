@@ -1,4 +1,4 @@
-package ooplab2;
+package oop_lab2;
 
 public class TestVariable {
     public static void main(String[] args) {
