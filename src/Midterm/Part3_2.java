@@ -1,4 +1,5 @@
 package Midterm;
+
 import java.util.Scanner;
 
 public class Part3_2 {
@@ -10,7 +11,6 @@ public class Part3_2 {
         System.out.println("show DataInfo");
         showDataInfo(id,name,sal,ov);
     }
-
     private static void showDataInfo(int id, String name, float sal, float ov) {
         Part3_2 a = new Part3_2();
         System.out.println("ID :"+ id);
@@ -19,29 +19,24 @@ public class Part3_2 {
         System.out.println("OverTime :"+ ov);
         System.out.println("Tax is :"+ a.calculateTex (sal,ov));
     }
-
     public static int getID() {
         Scanner in = new Scanner(System.in);
         System.out.print("Enter ID : ");
         int ID = in.nextInt();
         return ID;
     }
-
     public static String getName() {
         Scanner in = new Scanner(System.in);
         System.out.print("Enter you name : ");
         String name = in.nextLine();
         return name;
     }
-
     public static float getSalary() {
         Scanner in = new Scanner(System.in);
         System.out.print("Enter you salary : ");
         float salary = in.nextFloat();
         return salary;
     }
-
-
     public static float getOverTime() {
         Scanner in = new Scanner(System.in);
         System.out.print("Enter you Overtime : ");
