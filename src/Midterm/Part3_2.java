@@ -3,63 +3,61 @@ package Midterm;
 import java.util.Scanner;
 
 public class Part3_2 {
+    static Scanner scan = new Scanner(System.in);
     public static void main(String[] args) {
-        int id = getID();
-        String name = getName();
-        float sal = getSalary();
-        float ov = getOverTime();
-        System.out.println("show DataInfo");
-        showDataInfo(id,name,sal,ov);
-    }
-    private static void showDataInfo(int id, String name, float sal, float ov) {
+        String ID = getID();
+        String Name = getName();
+        float Salary = getSalary();
+        float OverTime = getOverTime();
+        calculateTex(Salary,OverTime);
+        ShowDataInfo(ID,Name,Salary,OverTime);
+    }//main
+    private static void ShowDataInfo(String ID, String Name, float Salary, float OverTime) {
         Part3_2 a = new Part3_2();
-        System.out.println("ID :"+ id);
-        System.out.println("Name :"+ name);
-        System.out.println("Salary :"+ sal);
-        System.out.println("OverTime :"+ ov);
-        System.out.println("Tax is :"+ a.calculateTex (sal,ov));
-
+        System.out.println("ID: "+ID);
+        System.out.println("Name: "+Name);
+        System.out.println("Salary: "+Salary);
+        System.out.println("OverTime: "+OverTime);
+        System.out.println("Tex is: "+a.calculateTex(Salary,OverTime));
     }
-    public static int getID() {
-        Scanner in = new Scanner(System.in);
-        System.out.print("Enter ID : ");
-        int ID = in.nextInt();
+    private static Float getOverTime() {
+        System.out.print("Enter your OverTime: ");
+        Float OverTime = scan.nextFloat();
+        return OverTime;
+    }
+    private static int getSalary() {
+        System.out.print("Enter your Salary: ");
+        int Salary = scan.nextInt();
+        return Salary;
+    }
+    private static String getName() {
+        System.out.print("Enter your Name: ");
+        String Name = scan.nextLine();
+        return Name;
+    }
+    private static String getID() {
+        System.out.print("Enter your ID: ");
+        String ID = scan.nextLine();
         return ID;
     }
-    public static String getName() {
-        Scanner in = new Scanner(System.in);
-        System.out.print("Enter you name : ");
-        String name = in.nextLine();
-        return name;
-    }
-    public static float getSalary() {
-        Scanner in = new Scanner(System.in);
-        System.out.print("Enter you salary : ");
-        float salary = in.nextFloat();
-        return salary;
-    }
-    public static float getOverTime() {
-        Scanner in = new Scanner(System.in);
-        System.out.print("Enter you Overtime : ");
-        float overTime = in.nextFloat();
-        return overTime;
-    }
-    private static int calculateTex(float a,float b){
-        float sum = b+a;
-        if (sum>=100000){
-            return 10;
+    private static float calculateTex(float a, float b) {
+        float sum = a+b;
+        System.out.println("Salary Total: "+sum);
+        if (sum>=100000)
+        {
+            return (sum*10)/100;
         }
         else if (sum>=70000){
-            return 7;
+            return (sum*7)/100;
         }
         else if (sum>=50000) {
-            return 5;
+            return (sum*5)/100;
         }
         else if (sum>=30000) {
-            return 3;
+            return (sum*3)/100;
         }
         else{
-            return 1;
+            return (sum*1)/100;
         }
     }
-}
+}//class
