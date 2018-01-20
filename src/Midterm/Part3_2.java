@@ -18,6 +18,7 @@ public class Part3_2 {
         System.out.println("Salary :"+ sal);
         System.out.println("OverTime :"+ ov);
         System.out.println("Tax is :"+ a.calculateTex (sal,ov));
+
     }
     public static int getID() {
         Scanner in = new Scanner(System.in);
