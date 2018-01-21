@@ -42,7 +42,7 @@ public class Part3_2 {
     }
     private static float calculateTex(float a, float b) {
         float sum = a+b;
-        System.out.println("Salary Total: "+sum);
+        System.out.println("Total Salary : "+sum);
         if (sum>=100000)
         {
             return (sum*10)/100;
