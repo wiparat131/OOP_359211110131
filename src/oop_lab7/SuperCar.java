@@ -5,19 +5,21 @@ package oop_lab7;
 //4.max speed ความเร็วสูงสุดของเครื่อง
 //5.country of origin
 public class SuperCar {
-    private String carbrand;
+    //properties of Supercar
+    private String carbrand ;
     private String carcolor;
-    private String carsize;
+    private String carenginesize;
     private String maxspeed;
     private String countryoforigin;
 
     public SuperCar(){}
-    public SuperCar(String carbrand,String carcolor,String carsize,String a){
-        this.carbrand = carbrand;
-        this.carcolor = carcolor;
-        this.carsize = carsize;
-        this.maxspeed = maxspeed;
-        this.countryoforigin = countryoforigin;
+    public SuperCar (String brand, String color, String size, String speed, String origin){
+        this.carbrand = brand;
+        this.carcolor = color;
+        this.carenginesize = size;
+        this.maxspeed = speed;
+        this.countryoforigin = origin;
+
     }
 
     @Override
@@ -25,7 +27,7 @@ public class SuperCar {
         return "SuperCar{" +
                 "carbrand='" + carbrand + '\'' +
                 ", carcolor='" + carcolor + '\'' +
-                ", carsize='" + carsize + '\'' +
+                ", carenginesize='" + carenginesize + '\'' +
                 ", maxspeed='" + maxspeed + '\'' +
                 ", countryoforigin='" + countryoforigin + '\'' +
                 '}';
@@ -47,12 +49,12 @@ public class SuperCar {
         this.carcolor = carcolor;
     }
 
-    public String getCarsize() {
-        return carsize;
+    public String getCarenginesize() {
+        return carenginesize;
     }
 
-    public void setCarsize(String carsize) {
-        this.carsize = carsize;
+    public void setCarenginesize(String carenginesize) {
+        this.carenginesize = carenginesize;
     }
 
     public String getMaxspeed() {
@@ -70,4 +72,8 @@ public class SuperCar {
     public void setCountryoforigin(String countryoforigin) {
         this.countryoforigin = countryoforigin;
     }
+    public String getSuperCarInfo(){
+        return getSuperCarInfo ();
+    }
+
 }//class

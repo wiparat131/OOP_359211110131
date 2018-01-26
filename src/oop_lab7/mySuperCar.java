@@ -1,20 +1,36 @@
 package oop_lab7;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class mySuperCar {
     public static void main(String[] args) {
-
+        ArrayList<SuperCar>myCarList = new ArrayList<>();
         SuperCar s1 = new SuperCar();
-        s1.setCarbrand("Jazz");
-        s1.setCarcolor("Black");
-        s1.setCarsize("i-VTEC 1.5 ลิตร 117 แรงม้า");
-        s1.setMaxspeed("7-speed");
+        s1.getCarbrand();
+        s1.getCarcolor();
+        s1.getCarenginesize();
+        s1.getMaxspeed();
+        s1.getCountryoforigin();
 
-        System.out.println(s1.toString());
-        SuperCar s2 = new SuperCar("Accord",
-                "green",
-                "150 แรงม้า","7-speed")
-
-
+        SuperCar su = new SuperCar();
+        su = inputData (su);
 
     }//main
+
+    private static SuperCar inputData(SuperCar su) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Insert your Supercar info: ");
+        System.out.print("Brand: ");
+        su.setCarbrand(scanner.nextLine());
+        System.out.print("Color: ");
+        su.setCarcolor(scanner.nextLine());
+        System.out.print("Engine Size: ");
+        su.setCountryoforigin(scanner.nextLine());
+        System.out.print("Max Speed: ");
+        su.setMaxspeed(scanner.nextLine());
+        System.out.print("Country of origin: ");
+        su.setCountryoforigin(scanner.nextLine());
+        System.out.println(su.toString());
+        return su;
+    }//inputData
 }//class
