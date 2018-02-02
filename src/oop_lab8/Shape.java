@@ -1,6 +1,6 @@
 package oop_lab8;
 
-public class Shape {
+public interface Shape {
     double findArea();
 
 }//class
