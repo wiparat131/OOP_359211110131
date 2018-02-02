@@ -17,6 +17,6 @@ public class Circle implements Shape {
 
     @Override
     public double findArea() {
-        return 3.17*(r*r);
+        return 3.14*(r*r);
     }
 }//class
