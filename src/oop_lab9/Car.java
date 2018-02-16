@@ -10,7 +10,7 @@ public class Car {
         this.color = color;
         this.engine = engine;
     }
-
+    // toString
     @Override
     public String toString() {
         return "Car{" +
@@ -19,7 +19,7 @@ public class Car {
                 ", engine=" + engine +
                 '}';
     }
-
+    // getter and setter
     public String getBrand() {
         return brand;
     }
